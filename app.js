@@ -1,7 +1,9 @@
 //Declaración de variables.
 let num_secreto = 0;
+let num_maximo = 10;
 let jugadas = 0;
 let max_intentos = 5;
+let listaNumerosSorteados = [];
 
 function asignarTexto(elemento, texto){
     let elementoHTML = document.querySelector(elemento);
@@ -9,11 +11,23 @@ function asignarTexto(elemento, texto){
     return;
 }
 function generaNumero() {
-    return Math.floor(Math.random()*10)+1;
+    numeroGenerado = Math.floor(Math.random()*num_maximo)+1;
+
+    if (listaNumerosSorteados.length == num_maximo){
+        asignarTexto('p', 'Ya se sortearon todos los números posibles.');
+    }
+    else{
+        if (listaNumerosSorteados.includes(numeroGenerado)){
+            return generaNumero();
+        } else{
+            listaNumerosSorteados.push(numeroGenerado);
+            return numeroGenerado;
+        }
+    }
 }
 function condicionesIniciales() {
     asignarTexto('h1','Adivina el número secreto...');
-    asignarTexto('p','Indica un número del 1 al 10.');
+    asignarTexto('p', `Indica un número del 1 al ${num_maximo}.`);
     num_secreto = generaNumero();
     jugadas = 1;
 }
