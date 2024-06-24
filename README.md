@@ -1,4 +1,4 @@
-<h1>Adivina número secreto.<h1>
+<h1> Adivina número secreto. </h1>
 
 -  Estado del proyecto: Finalizado.
 
