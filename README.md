@@ -1,4 +1,8 @@
-Adivina número secreto.
+<h1>Adivina número secreto.<h1>
 
-- Para jugar al número secreto hay que indicar un valor entre 1-10.
-- Cuentas con hasta 5 intentos para adivinar en número secreto.
+-  Estado del proyecto: Finalizado.
+
+Para jugar a adivina el número secreto debes:
+
+```Ingresar un valor entre 1-10.```
+```Cuentas con hasta 5 intentos para participar.```
